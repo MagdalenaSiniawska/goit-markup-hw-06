@@ -814,3 +814,31 @@ footer {
     border: 1px solid #404BBF;
     fill:#404BBF;
 }
+
+@media (min-width:321px and max-width:768px){
+    .address_list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .company_values{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .workers_list{
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    .portfolio_list{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+ }
