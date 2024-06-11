@@ -129,6 +129,16 @@ img {
     margin: 0 auto;
 }
 
+.button:hover {
+    background-color: #404BBF;
+    border-color: #404BBF;
+}
+
+.button:focus {
+    background-color: #404BBF;
+    border-color: #404BBF;
+}
+
  .visually-hidden {
      position: absolute;
      width: 1px;
@@ -156,7 +166,7 @@ img {
      text-align: left;
      justify-content: center;
      align-items: center;
-     max-width: 288px;
+     min-width: 288px;
  }
  .company_values_container{
     padding: 0;
@@ -229,7 +239,8 @@ img {
          0px 2px 1px rgba(46, 47, 66, 0.08);
     align-content: center;
     max-width: 264px;
-    margin-bottom: 72px
+    margin-bottom: 72px;
+    margin-left: 28px;
  }
 
  .worker:last-child{
@@ -708,9 +719,94 @@ footer {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal_container_burger_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 640px; 
+    background-color: #ffffff;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal_window_burger_menu{
+    position: absolute;
+}
+
+.burger_close_button{
+    top: 0;
+    right: 0;
+    margin-top: 24px;
+    margin-left: 250px;
+    position: relative;
+}
+
+.navigation_burger_menu{
+    margin-left: 16px;
+    margin-top: 24px;
+}
+
+.navigation_section_burger_menu, .address_list_burger{
+    list-style: none;
+    display: block;
+}
+
+.navigation_option_burger{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: 2%;
+    color: #2E2F42;
+    text-decoration: none;
+    display: grid;
+    margin-bottom: 40px;
+}
+
+.address_option_burger_menu {
+    text-decoration: none;
+    color: #434455;
+}
+
+.first_menu_burger_link {
+    position: relative;
+    color: #404BBF;
+}
+
+.first_menu_burger_list::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
+
+.address_list_burger {
+    margin-left: 16px;
+    margin-top: 128px;
+    display: grid;
+    gap: 24px;
+}
+
+.social_media_icons_menu_burger{
+    margin-left: 16px;
+    margin-top: 48px;
+}
+
+.list_icons_footer{
+    margin-right: 25px;
+}
+
+
 @media screen and (min-width: 768px){
     .burger_menu_container{
         display: none;
+    }
+
+    .container {
+        width: 768px;
     }
 
     .navigation_section,
@@ -835,11 +931,17 @@ footer {
     }
 
     .portfolio_list{
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
     }
+
+    .portfolio{
+        width: calc((100% - 48px) / 2);
+        display:grid;
+    }
+
     
     .container_footer{
         display: flex;
@@ -861,10 +963,172 @@ footer {
         justify-self:right
     }
 
-    /* .modal_window{
-        width: 408px;
-        max-height: 584px;
+    .modal_container_burger_menu{
+        display: none;
     }
 
-    .modal_window_header {} */
+    .modal_window{
+        width: 408px;
+        max-height: 584px;
+        left: 45%;
+    }
+
+    .modal_window_header {
+        margin-top: 24px;
+    }
+}
+
+@media screen and (min-width: 1158px){
+    .burger_menu_container {
+        display: none;
+    }
+
+    .container {
+        width: 1158px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .navigation_container {
+        display: flex;
+    }
+    
+    .navigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .address_list{
+        display: inline-flex;
+    }
+
+    .logo_header {
+        margin-right: 24px;
+    }
+
+    .main_text_section {
+        background-color: #2E2F42;
+        justify-content: center;
+        padding: 188px 0;
+        min-width: 1158px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .main_text {
+        font-size: 56px;
+        max-width: 496px;
+        padding-bottom: 48px;
+    }
+
+    .company_values {
+        min-width: 1158px;
+        gap: 24px;
+    }
+
+    .company_values_list{
+        width: calc((100% - 72px) / 4);
+        display: grid;
+    }
+
+    .company_values_header {
+        font-size: 20px;
+        margin-right: 24px;
+    }
+    .company_values_text {
+        margin-right: 24px;
+        min-width: 264px;
+        margin-bottom: 120px;
+    } 
+
+    .company_values_icon {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon_company_values {
+        display: flex;
+        height: 112px;
+        min-width: 264px;
+        background-color: #f4f4fd;
+        border-radius: 4px;
+        border: 1px solid #8e8f99;
+        margin-bottom: 8px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .company_values_section {
+        padding: 120px 0;
+    }
+
+    #fake_header {
+    color:#FFFFFF;    
+    }
+
+    .our_team {
+        margin-left: 0;
+        padding: 120px 0;
+        display: flex;
+    }
+    .workers_list {
+        display: flex;
+        gap: 24px;
+        flex-wrap: nowrap
+    }
+
+     .worker {
+    max-width: 264px;
+    margin-bottom: 72px;
+    margin-left: 28px;
+    }
+    .portfolio_section {
+        padding: 120px 0 120px 0;
+    }
+
+    .portfolio_list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+
+    .portfolio {
+        width: calc((100% - 48px) / 3);
+    }
+
+    .logo_footer {
+        margin-bottom: 16px;
+    }
+
+    .footer_article {
+        max-width: 264px;
+    }
+
+    .container_footer{
+        display: flex;
+        align-items: baseline;
+    }
+    .newsletter_email {
+        width: 264px;
+    }
+
+    .modal_window{
+        width: 408px;
+        min-height: 584px;
+    }
+
+        .modal_window_header {
+            line-height: 1.5;
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+}
+
+@media (min-resolution: 192dpi) {
+    .box {
+        background-image: url(../images/people-office@2x.jpg);
+    }
 }
