@@ -153,7 +153,7 @@ img {
  }
 
  .company_values_section {
-     padding: 96px 16px 0;
+    padding: 96px 16px 0;
 
  }
 
@@ -373,7 +373,7 @@ img {
     height: 100%;
 }
 
-footer {
+.footer {
     font-family: inherit;
     text-align: center;
     color: #F4F4FD;
@@ -422,6 +422,7 @@ footer {
     gap: 16px;
     list-style: none;
     justify-content: center;
+    margin-right: 25px;
 }
 
 .list_icons_footer {
@@ -795,9 +796,9 @@ footer {
     margin-top: 48px;
 }
 
-.list_icons_footer{
+/* .list_icons_footer{
     margin-right: 25px;
-}
+} */
 
 
 @media screen and (min-width: 768px){
@@ -942,6 +943,10 @@ footer {
         display:grid;
     }
 
+    .footer{
+        text-align: left;
+    }
+
     
     .container_footer{
         display: flex;
@@ -1011,7 +1016,7 @@ footer {
         justify-content: center;
         padding: 188px 0;
         min-width: 1158px;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg), url(../images/people-office@2x.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -1036,17 +1041,13 @@ footer {
     .company_values_header {
         font-size: 20px;
         margin-right: 24px;
+        justify-content:left;
     }
     .company_values_text {
         margin-right: 24px;
         min-width: 264px;
         margin-bottom: 120px;
     } 
-
-    .company_values_icon {
-        align-items: center;
-        justify-content: center;
-    }
 
     .icon_company_values {
         display: flex;
@@ -1099,9 +1100,14 @@ footer {
         width: calc((100% - 48px) / 3);
     }
 
+    .footer{
+        text-align: left;
+    }
+
     .logo_footer {
         margin-bottom: 16px;
     }
+    
 
     .footer_article {
         max-width: 264px;
