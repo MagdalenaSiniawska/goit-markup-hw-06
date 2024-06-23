@@ -35,6 +35,7 @@ img {
 
 .navigation_container {
     display: flex;
+    align-items: center;
 }
 
 .logo_header {
@@ -1001,6 +1002,7 @@ img {
 
     .navigation_container {
         display: flex;
+        align-items: center;
     }
     
     .navigation {
@@ -1056,9 +1058,9 @@ img {
         justify-content:left;
     }
     .company_values_text {
-        margin-right: 24px;
+        /* margin-right: 24px; */
         min-width: 264px;
-        margin-bottom: 120px;
+        /* margin-bottom: 120px; */
     } 
 
     .icon_company_values {
@@ -1093,8 +1095,8 @@ img {
     }
 
      .worker {
-    max-width: 264px;
-    margin-bottom: 72px;
+    /* max-width: 264px;
+    margin-bottom: 72px; */
     margin-left: 0;
     }
     .portfolio_section {
@@ -1111,6 +1113,7 @@ img {
 
     .portfolio {
         width: calc((100% - 48px) / 3);
+        margin: 0;
     }
 
     .footer{
@@ -1142,7 +1145,7 @@ img {
 
     .container_footer{
         display: flex;
-        align-items: baseline;
+        flex-wrap: nowrap;
     }
     .newsletter_email {
         width: 264px;
