@@ -1146,10 +1146,24 @@ img {
     .container_footer{
         display: flex;
         flex-wrap: nowrap;
+        align-items: center;
     }
     .newsletter_email {
         width: 264px;
     }
+
+    .newsletter_email_space{
+        display: flex;
+    }
+
+    .footer_newsletter{
+        margin-left: 0;
+    }
+    
+    .subscribe_label{
+        margin-bottom: 0;
+    }
+
 
     .modal_window{
         width: 408px;
